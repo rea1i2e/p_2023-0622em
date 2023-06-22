@@ -1,0 +1,59 @@
+@use "global" as *;
+@use "sass:math";
+
+.p-swiper,
+.p-swiper__sub-swiper {
+	width: 100%;
+	height: 90vh; // 高さの指定が必須
+	overflow: hidden; // スライド切り替え時の横スクロール防止
+}
+
+.p-swiper .swiper-wrapper {
+	width: 100%;
+}
+
+.p-swiper .swiper-slide {
+	width: 100%;
+}
+
+.p-swiper img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.p-swiper__prev {
+	color: red;
+	top: rem(40);
+	left: 50%;
+	rotate: 90deg;
+}
+.p-swiper__next {
+	color: red;
+	top: auto;
+	bottom: rem(40);
+	right: 50%;
+	rotate: 90deg;
+}
+
+.p-swiper__pagination.swiper-pagination-vertical.swiper-pagination-bullets,
+.p-swiper__pagination.swiper-vertical > .swiper-pagination-bullets {
+	top: auto;
+	bottom: rem(40);
+}
+
+.p-swiper__pagination.swiper-pagination-vertical.swiper-pagination-bullets .swiper-pagination-bullet,
+.p-swiper__pagination.swiper-vertical > .swiper-pagination-bullets .swiper-pagination-bullet {
+	background-color: red;
+}
+
+.p-swiper__sub-pagination.swiper-horizontal > .swiper-pagination-bullets,
+.p-swiper__sub-pagination.swiper-pagination-bullets.swiper-pagination-horizontal,
+.p-swiper__sub-pagination.swiper-pagination-custom,
+.p-swiper__sub-pagination.swiper-pagination-fraction {
+	// background-color: pink;
+	top: rem(40);
+	bottom: auto;
+	text-align: right;
+	padding-right: rem(40);
+}
